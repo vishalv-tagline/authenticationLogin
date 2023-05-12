@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <h3 class="h3 navbar-brand fw-bold text-primary" href="#">
+      {{ providers }}
+    </h3>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"></li>
+      </ul>
+      <div class="d-flex">
+        <img
+          [src]="userDetails.imageUrl"
+          alt="img"
+          class="mx-2"
+          height="65px"
+          width="65px"
+          style="border-radius: 50%"
+        />
+      </div>
+      <button class="btn btn-md btn-danger" (click)="onLogout()">Logout</button>
+    </div>
+  </div>
+</nav>
+<div>
+  <div class="card w-50 mx-auto mt-5">
+    <div class="card-header">
+      <h5 class="h5 pt-2 text-primary">Facebook Details</h5>
+    </div>
+    <div class="card-content">
+      <div class="p-2">
+        <img
+          [src]="userDetails.imageUrl"
+          alt="img"
+          class="mx-2"
+          height="75px"
+          width="75px"
+          style="border-radius: 50%"
+        />
+        <hr />
+        <h5 class="h5">
+          User Name : Welcome,
+          <span class="text-danger">{{ userDetails.userName }}</span>
+        </h5>
+        <hr />
+        <h5 class="h5">
+          User Email Address :
+          <span class="text-danger">{{ userDetails.email }}</span>
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
